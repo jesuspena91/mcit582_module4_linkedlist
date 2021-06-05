@@ -34,8 +34,7 @@ def next_block(last_block):
     
 # append 5 blocks to the blockchain
 def app_five(block_list):
-    pass
-
-for block in M4BlockChain:
-	print(block.index)
-	next_block(block)
+	for i in range(1,6):
+		block_list.append(next_block(block_list[-1]))
+	
+	return block_list
